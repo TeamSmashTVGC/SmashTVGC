@@ -63,7 +63,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AIState.cs" />
+    <Compile Include="Assets\Scripts\AI\AIState.cs" />
+    <Compile Include="Assets\Scripts\AI\AIStateAlert.cs" />
+    <Compile Include="Assets\Scripts\AI\AIStateAttack.cs" />
+    <Compile Include="Assets\Scripts\AI\AIStateDead.cs" />
+    <Compile Include="Assets\Scripts\AI\AIStateHide.cs" />
+    <Compile Include="Assets\Scripts\AI\AIStateIdle.cs" />
+    <Compile Include="Assets\Scripts\AI\AIStatePatrol.cs" />
+    <Compile Include="Assets\Scripts\AI\Brain.cs" />
+    <Compile Include="Assets\Scripts\AI\BrainSoldier.cs" />
+    <Compile Include="Assets\Scripts\AI\BrainTurret.cs" />
+    <Compile Include="Assets\Scripts\DestroyOnExitScreen.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
+    <Compile Include="Assets\Scripts\NPCMovement.cs" />
+    <Compile Include="Assets\Scripts\NPCWeapon.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\Test\Glen_Move.cs" />
+    <Compile Include="Assets\Scripts\Waypoint.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
