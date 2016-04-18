@@ -24,13 +24,14 @@ public class NPCWeapon : MonoBehaviour
         if (target == null)
             return;
 
-        // Find out where the target is
-        aimVector = target.transform.position - transform.position;
+        // Face player, but zero out position y to fire straight
+        Vector3 lookAtPosition = target.transform.position;
+        lookAtPosition.y = transform.position.y;
+        gameObject.transform.LookAt(lookAtPosition, Vector3.up);
         
+        // Fire projectile
         GameObject projectileOBJ = Instantiate(projectile, transform.position, transform.rotation) as GameObject;
         projectileOBJ.layer = LayerMask.NameToLayer("EnemyProjectile");
-        Rigidbody projectileRB = projectileOBJ.GetComponent<Rigidbody>();
-        projectileRB.velocity = aimVector * attackSpeed;
     }
 
     // Update is called once per frame
