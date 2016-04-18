@@ -10,7 +10,8 @@ public class Projectile : MonoBehaviour {
     private Rigidbody projectileRB;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         projectileRB = GetComponent<Rigidbody>();
 	}
 
