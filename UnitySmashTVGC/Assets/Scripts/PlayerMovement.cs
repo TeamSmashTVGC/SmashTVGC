@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        // Move
+        // Move the player
         Move(h, v);
 	}
 
@@ -33,6 +33,6 @@ public class PlayerMovement : MonoBehaviour {
         movement.Set(h, 0f, v);
         movement = movement.normalized * speed * Time.deltaTime;
         playerRigidbody.MovePosition(transform.position + movement);
-           
+
     }
 }
